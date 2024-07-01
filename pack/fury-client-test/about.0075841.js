@@ -1,0 +1,1 @@
+(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([[11],{1710:function(n,e,t){"use strict";t.r(e);var s=t(0);const c={class:"about"},o=Object(s["m"])("h1",null,"This is an about page",-1),u=[o];function a(n,e){return Object(s["M"])(),Object(s["l"])("div",c,u)}var i=t(4),r=t.n(i);const b={},w=r()(b,[["render",a],["__file","src/views/About.vue"]]);e["default"]=w}}]);

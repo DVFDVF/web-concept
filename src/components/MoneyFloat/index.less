@@ -1,0 +1,53 @@
+.money-float {
+  position: absolute;
+  top: 10px;
+  opacity: 0;
+  animation: moveAndFade 0.7s cubic-bezier(0.43, 0.4, 0.26, 0.4) normal;
+  pointer-events: none;
+  height: 20px;
+  .icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  .value {
+    font-size: 14px;
+    font-family: Montserrat Variable, sans-serif;
+    font-weight: 600;
+    letter-spacing: -0.5px;
+    color: #00ff00;
+    margin-left: 8px;
+  }
+  .gine-nine-value{
+    font-family: Montserrat Variable, sans-serif;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    color: #00ff00;
+    margin-left: 20px;
+  }
+
+  @keyframes moveAndFade {
+    0% {
+      opacity: 0;
+      transform: translateY(10px) scale(1);
+    }
+
+    75% {
+      opacity: 1;
+      transform: translateY(0) scale(1.1);
+    }
+
+    to {
+      opacity: 0;
+      transform: translateY(-20px) scale(1);
+    }
+  }
+}
+.gine-nine-float{
+  top: 30px;
+}
+@media only screen and (max-width: 767px) {
+  .gine-nine-float{
+    top: 20px;
+  }
+}

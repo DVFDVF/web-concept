@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+    />
+    <link rel="icon" href="/favicon.ico" />
+    <link href="/public/svg/sprite.svg" />
+    <title>Between</title>
+    <style>
+      #app {
+        font-family: Avenir, Helvetica, Arial, sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        text-align: center;
+        color: #2c3e50;
+        width: 100%;
+        height: 100%;
+      }
+      .x-load-box {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+      }
+
+      body {
+        background-color: #1b2636;
+      }
+
+      .x-load {
+        width: 30px;
+        height: 30px;
+        position: relative;
+        -webkit-transform: rotate(45deg);
+        transform: rotate(45deg);
+      }
+      .x-load .x-e {
+        position: absolute;
+        border-radius: 1px;
+        width: 15px;
+        height: 15px;
+      }
+      .x-load .x-e.x-e1 {
+        left: 0;
+        background-color: #5c6bc0;
+      }
+      .x-load .x-e.x-e2 {
+        right: 0;
+        background-color: #8bc34a;
+      }
+      .x-load .x-e.x-e3 {
+        bottom: 0;
+        background-color: #ffb74d;
+      }
+      .x-load .x-e.x-e4 {
+        bottom: 0;
+        right: 0;
+        background-color: #f44336;
+      }
+    </style>
+    <script>
+      //SHOW_USER_ID
+      var s = 15;
+      var cfg = [
+        [0, 0, s, s, 0, s, s, 0],
+        [0, -s, -s, 0, 0, 0, s, s],
+        [0, s, s, 0, 0, 0, -s, -s],
+        [0, 0, -s, -s, 0, -s, -s, 0],
+      ];
+      function mk(d) {
+        var c = cfg[d];
+        var r = [];
+        for (var i = 0; i < 4; ++i) {
+          var t = 'transform: translate(' + c[i] + 'px,' + c[i + 4] + 'px);';
+          var wt = '-webkit-' + t;
+          r.push(i * 25 + '%{' + t + wt + '}');
+        }
+        return r.join('');
+      }
+      var sl = [];
+      for (var i = 1; i < 5; ++i) {
+        var a = mk(i - 1);
+        sl.push(
+          '.x-load .x-e' +
+            i +
+            ' {animation: a-5x-e' +
+            i +
+            ' 2s ease 0s infinite reverse;}',
+        );
+        var kf = 'keyframes a-5x-e' + i + ' {' + a + '}';
+        sl.push('@' + kf);
+        sl.push('@-webkit-' + kf);
+      }
+      var styleText = document.createElement('style');
+      styleText.innerHTML = sl.join('');
+      document.querySelector('head').appendChild(styleText);
+    </script>
+  <link href="/0.bb4cbdc.js" rel="prefetch"><link href="/1.0d0ec20.js" rel="prefetch"><link href="/10.f29e134.js" rel="prefetch"><link href="/15.063a8b1.js" rel="prefetch"><link href="/16.77b2cd4.js" rel="prefetch"><link href="/17.e00ff4c.js" rel="prefetch"><link href="/18.cc046b1.js" rel="prefetch"><link href="/19.ac35783.js" rel="prefetch"><link href="/2.899eb4f.js" rel="prefetch"><link href="/20.37d3423.js" rel="prefetch"><link href="/21.93f46a3.js" rel="prefetch"><link href="/22.b10d9ea.js" rel="prefetch"><link href="/23.60c2cc7.js" rel="prefetch"><link href="/24.62fc782.js" rel="prefetch"><link href="/25.58b11cf.js" rel="prefetch"><link href="/26.cd3efb4.js" rel="prefetch"><link href="/27.6334400.js" rel="prefetch"><link href="/28.04f9cbe.js" rel="prefetch"><link href="/29.231d7bb.js" rel="prefetch"><link href="/3.7e4aab7.js" rel="prefetch"><link href="/30.5b1f99c.js" rel="prefetch"><link href="/31.c50c9cd.js" rel="prefetch"><link href="/32.cc232d4.js" rel="prefetch"><link href="/33.7687735.js" rel="prefetch"><link href="/34.04638aa.js" rel="prefetch"><link href="/35.1f9d5f4.js" rel="prefetch"><link href="/36.7a07fd8.js" rel="prefetch"><link href="/37.19419e7.js" rel="prefetch"><link href="/38.3eb8520.js" rel="prefetch"><link href="/39.5216d65.js" rel="prefetch"><link href="/4.c7552fc.js" rel="prefetch"><link href="/40.2b096af.js" rel="prefetch"><link href="/41.8569d9c.js" rel="prefetch"><link href="/42.af8eab1.js" rel="prefetch"><link href="/43.c938acb.js" rel="prefetch"><link href="/44.d664585.js" rel="prefetch"><link href="/45.baa4025.js" rel="prefetch"><link href="/46.9b86456.js" rel="prefetch"><link href="/47.1e28ee6.js" rel="prefetch"><link href="/48.dd123ca.js" rel="prefetch"><link href="/49.6e6aecd.js" rel="prefetch"><link href="/5.6e5ddfa.js" rel="prefetch"><link href="/50.fc8863c.js" rel="prefetch"><link href="/51.d2e6844.js" rel="prefetch"><link href="/6.07706cf.js" rel="prefetch"><link href="/7.012864a.js" rel="prefetch"><link href="/8.229147e.js" rel="prefetch"><link href="/9.6d15bd4.js" rel="prefetch"><link href="/about.0075841.js" rel="prefetch"><link href="/team-introduction.9b71e50.js" rel="prefetch"><link href="/app.9eb30ed.js" rel="preload" as="script"><link href="/chunk-vendors.6bc2aef.js" rel="preload" as="script"></head>
+  <body>
+    <noscript>
+      <strong
+        >We're sorry but fury-client doesn't work
+        properly without JavaScript enabled. Please enable it to
+        continue.</strong
+      >
+    </noscript>
+    <div id="app">
+      <div class="x-load-box">
+        <div class="x-load">
+          <div class="x-e x-e1"></div>
+          <div class="x-e x-e2"></div>
+          <div class="x-e x-e3"></div>
+          <div class="x-e x-e4"></div>
+        </div>
+      </div>
+    </div>
+    <!-- built files will be auto injected -->
+  <script type="text/javascript" src="/chunk-vendors.6bc2aef.js"></script><script type="text/javascript" src="/app.9eb30ed.js"></script></body>
+</html>

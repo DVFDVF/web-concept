@@ -1,0 +1,333 @@
+html,
+body {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+.flex-scrollx {
+  flex: 1;
+  overflow-x: scroll;
+}
+.flex-scrolly {
+  flex: 1;
+  overflow-y: scroll;
+}
+.flex1 {
+  flex: 1;
+  overflow: hidden;
+}
+
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.row-center {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.row-middle {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.row-between{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.col-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.col-middle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hide {
+  display: none;
+}
+.btn {
+  cursor: pointer;
+}
+
+.h-text {
+  text-decoration: none;
+}
+
+.h-end {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+@font-face {
+  font-family: 'Montserrat Variable';
+  /* 选择一个字体名称 */
+  src: url('/fonts/montserrat-latin-wght-normal.woff2') format('woff2');
+  /* 字体文件的路径和格式 */
+}
+
+@keyframes rolling {
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+@keyframes coin-lg {
+  0% {
+    transform: translateY(0) scale(1);
+  }
+
+  50% {
+    transform: translateY(4px) scale(1.2);
+  }
+
+  to {
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes coin-sm {
+  0% {
+    transform: translateY(0) scale(1);
+  }
+
+  50% {
+    transform: translateY(2px) scale(1.2);
+  }
+
+  to {
+    transform: translateY(0) scale(1);
+  }
+}
+
+// 弹窗组件的样式
+.top-layer {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  left: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.83);
+  .container {
+    position: relative;
+  }
+  .close {
+    color: #93acd3;
+    font-size: 38px;
+    font-weight: 500;
+    height: 38px;
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    width: 38px;
+  }
+}
+:where(svg:not([fill])) {
+  fill: currentColor;
+}
+
+// head
+@keyframes head-fes {
+  0% {
+    transform: matrix(0.26, 0.97, -0.97, 0.26, 0, 0) translate(0) translateY(0);
+  }
+
+  5% {
+    transform: matrix(0.26, 0.97, -0.97, 0.26, 0, 0) translate(0) translateY(0);
+  }
+
+  25% {
+    transform: matrix(0.26, 0.97, -0.97, 0.26, 0, 0) translate(15px)
+      translateY(5px);
+  }
+
+  75% {
+    transform: matrix(0.26, 0.97, -0.97, 0.26, 0, 0) translate(15px)
+      translateY(5px);
+  }
+
+  95% {
+    transform: matrix(0.26, 0.97, -0.97, 0.26, 0, 0) translate(0) translateY(0);
+  }
+
+  100% {
+    transform: matrix(0.26, 0.97, -0.97, 0.26, 0, 0) translate(0) translateY(0);
+  }
+}
+
+@keyframes head-twored {
+  0% {
+    transform: rotate(98.97deg) translate(0) translateY(0);
+  }
+
+  5% {
+    transform: rotate(98.97deg) translate(0) translateY(0);
+  }
+
+  25% {
+    transform: rotate(98.97deg) translate(10px) translateY(9px);
+  }
+
+  75% {
+    transform: rotate(98.97deg) translate(10px) translateY(9px);
+  }
+
+  95% {
+    transform: rotate(98.97deg) translate(0) translateY(0);
+  }
+
+  100% {
+    transform: rotate(98.97deg) translate(0) translateY(0);
+  }
+}
+
+@keyframes head-freo {
+  0% {
+    transform: rotate(45.28deg) translate(0) translateY(0);
+  }
+
+  5% {
+    transform: rotate(45.28deg) translate(0) translateY(0);
+  }
+
+  25% {
+    transform: rotate(45.28deg) translate(-8px) translateY(10px);
+  }
+
+  75% {
+    transform: rotate(45.28deg) translate(-8px) translateY(10px);
+  }
+
+  95% {
+    transform: rotate(45.28deg) translate(0) translateY(0);
+  }
+
+  100% {
+    transform: rotate(45.28deg) translate(0) translateY(0);
+  }
+}
+
+@keyframes head-foury {
+  0% {
+    transform: rotate(84.97deg) translate(0) translateY(0);
+  }
+
+  5% {
+    transform: rotate(84.97deg) translate(0) translateY(0);
+  }
+
+  25% {
+    transform: rotate(84.97deg) translate(-20px) translateY(0);
+  }
+
+  75% {
+    transform: rotate(84.97deg) translate(-20px) translateY(0);
+  }
+
+  95% {
+    transform: rotate(84.97deg) translate(0) translateY(0);
+  }
+
+  100% {
+    transform: rotate(84.97deg) translate(0) translateY(0);
+  }
+}
+
+@keyframes head-gifty {
+  0% {
+    transform: rotate(0);
+  }
+
+  23% {
+    transform: rotate(0);
+  }
+
+  33% {
+    transform: rotate(-8deg);
+  }
+
+  50% {
+    transform: rotate(0);
+  }
+
+  67% {
+    transform: rotate(8deg);
+  }
+
+  to {
+    transform: rotate(0);
+  }
+}
+ul,
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.ant-pagination-item {
+  border-color: white !important;
+  a {
+    color: white !important;
+  }
+}
+.ant-pagination-item-active {
+  background-color: rgb(23, 182, 118) !important;
+  color: white !important;
+  a {
+    color: white !important;
+  }
+}
+.ant-pagination-item-active:hover {
+  border-color: white !important;
+  a {
+    color: white !important;
+  }
+}
+.ant-pagination-prev .ant-pagination-item-link {
+  border: 1px solid white !important;
+  background-color: transparent !important;
+  color: white !important;
+}
+.ant-pagination-item-active:hover a {
+  color: white !important;
+}
+.ant-pagination-item-active a {
+  color: white !important;
+}
+.ant-pagination-next .ant-pagination-item-link {
+  border: 1px solid white !important;
+  background-color: transparent !important;
+  color: white !important;
+}
+.ant-pagination .ant-pagination-item-ellipsis {
+  color: white !important;
+}
+.ant-pagination-prev .ant-pagination-item-link:disabled {
+  color: gray !important;
+}
+.ant-pagination-next .ant-pagination-item-link:disabled {
+  color: gray !important;
+}
+.ant-pagination-item a {
+  color: white !important;
+}
